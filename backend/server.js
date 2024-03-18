@@ -7,7 +7,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
-mongoose.connect('mongodb+srv://rudrabhardwaj121201:rudr12%40dec@cluster0.ii19pvj.mongodb.net/todoApp')
+mongoose.connect('mongodb://localhost:27017/todoApp')
 
 server.post('/add', (req, res) => {
   const task = req.body.task;
